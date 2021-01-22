@@ -13,7 +13,6 @@ function next_q()
 			$('#question').html(question);
 			
 			timer_restart();
-			display_tip();
 		} else
 		{
 			$('#question').addClass('hide');
@@ -65,21 +64,7 @@ function timer_restart()
 	$('.pg').addClass('hide');
 	$('#timer').removeClass('hide');
 	
-	timer = 15;
+	timer = 30;
 	
-	$('#timer').html('15 s');
-}
-
-
-
-/* --- Tip Functions ---
-   -------------------------------------------------- */
-
-function display_tip()
-{
-	var tip = tips.shift();
-	
-	$('#tip').html(tip);
-	
-	tips.push(tip);
+	$('#timer').html('30 s');
 }
